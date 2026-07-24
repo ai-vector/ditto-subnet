@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.29.2 (2026-07-24)
+
+### Bug Fixes
+
+- Require admission before upload payment
+  ([#245](https://github.com/ditto-assistant/ditto-subnet/pull/245),
+  [`9006bcd`](https://github.com/ditto-assistant/ditto-subnet/commit/9006bcd19c50e63fb9c00def030bb4b4d8ab762f))
+
+
 ## v0.29.1 (2026-07-24)
 
 ### Bug Fixes
