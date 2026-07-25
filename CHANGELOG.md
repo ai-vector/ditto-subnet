@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.29.8 (2026-07-25)
+
+### Bug Fixes
+
+- **sandbox**: Reject denied egress instead of dropping it
+  ([#253](https://github.com/ditto-assistant/ditto-subnet/pull/253),
+  [`46d6770`](https://github.com/ditto-assistant/ditto-subnet/commit/46d67703c89be054576f05def8865d7110e50a0e))
+
+
 ## v0.29.7 (2026-07-25)
 
 ### Bug Fixes
