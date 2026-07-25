@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.32.1 (2026-07-25)
+
+### Bug Fixes
+
+- **validator**: Stop a dead local Ollama from blocking benchmark v7
+  ([#264](https://github.com/ditto-assistant/ditto-subnet/pull/264),
+  [`9c9e3f1`](https://github.com/ditto-assistant/ditto-subnet/commit/9c9e3f1f87327ed7bbe165d7906ad94189e678a7))
+
+
 ## v0.32.0 (2026-07-25)
 
 ### Features
