@@ -2,6 +2,18 @@
 
 <!-- version list -->
 
+## v0.30.2 (2026-07-25)
+
+### Bug Fixes
+
+- Repin dittobench api ([#256](https://github.com/ditto-assistant/ditto-subnet/pull/256),
+  [`bd3ca0b`](https://github.com/ditto-assistant/ditto-subnet/commit/bd3ca0bf6af4c78433653bd258e684c1f1daeb77))
+
+- **miner**: Make paid uploads resilient
+  ([#249](https://github.com/ditto-assistant/ditto-subnet/pull/249),
+  [`e3bb24c`](https://github.com/ditto-assistant/ditto-subnet/commit/e3bb24c12381d1d2c714cf0e10f93b11d802bab3))
+
+
 ## v0.30.1 (2026-07-25)
 
 ### Bug Fixes
