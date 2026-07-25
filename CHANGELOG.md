@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.30.1 (2026-07-25)
+
+### Bug Fixes
+
+- **validator**: Allow the platform's inference host to differ from its API host
+  ([#255](https://github.com/ditto-assistant/ditto-subnet/pull/255),
+  [`a5e8be8`](https://github.com/ditto-assistant/ditto-subnet/commit/a5e8be8ff3cdebbffd7b8430244b9a47c94da1fc))
+
+
 ## v0.30.0 (2026-07-25)
 
 ### Features
