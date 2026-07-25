@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.32.0 (2026-07-25)
+
+### Features
+
+- **validator**: Ship real bench-slot concurrency and stop failing closed on it
+  ([#258](https://github.com/ditto-assistant/ditto-subnet/pull/258),
+  [`64ed758`](https://github.com/ditto-assistant/ditto-subnet/commit/64ed758923c45f09a34238168bd85b388d5457a6))
+
+
 ## v0.31.0 (2026-07-25)
 
 ### Bug Fixes
