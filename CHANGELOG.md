@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.32.2 (2026-07-25)
+
+### Bug Fixes
+
+- **validator**: Claim a benchmark slot before the inference hand-off
+  ([#265](https://github.com/ditto-assistant/ditto-subnet/pull/265),
+  [`31e5d2c`](https://github.com/ditto-assistant/ditto-subnet/commit/31e5d2cab5ee55f41ee07af18be0097bb4852a30))
+
+
 ## v0.32.1 (2026-07-25)
 
 ### Bug Fixes
