@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.29.4 (2026-07-25)
+
+### Bug Fixes
+
+- Stop a stale scorer image from persisting or misreporting itself
+  ([#247](https://github.com/ditto-assistant/ditto-subnet/pull/247),
+  [`59adabc`](https://github.com/ditto-assistant/ditto-subnet/commit/59adabc37b19f31e56a01e28e7b733fe71175dfe))
+
+
 ## v0.29.3 (2026-07-24)
 
 ### Bug Fixes
