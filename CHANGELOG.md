@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.29.6 (2026-07-25)
+
+### Bug Fixes
+
+- Authorize the validator on the scorer inference control plane
+  ([#250](https://github.com/ditto-assistant/ditto-subnet/pull/250),
+  [`c7f64d7`](https://github.com/ditto-assistant/ditto-subnet/commit/c7f64d7f1f84a24f532e875ad2416da55e4e6d47))
+
+
 ## v0.29.5 (2026-07-25)
 
 ### Bug Fixes
