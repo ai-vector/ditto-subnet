@@ -2,6 +2,21 @@
 
 <!-- version list -->
 
+## v0.33.0 (2026-07-25)
+
+### Chores
+
+- Sync LedgerEntry wire copy with the platform contract
+  ([#266](https://github.com/ditto-assistant/ditto-subnet/pull/266),
+  [`a00603f`](https://github.com/ditto-assistant/ditto-subnet/commit/a00603f2dedad28cd35dd88f59b6e956967aa7db))
+
+### Features
+
+- Retire the legacy validator-only auto-updater
+  ([#172](https://github.com/ditto-assistant/ditto-subnet/pull/172),
+  [`ab6542b`](https://github.com/ditto-assistant/ditto-subnet/commit/ab6542bb92401ce1cc6540c4dfaf3525a658792c))
+
+
 ## v0.32.3 (2026-07-25)
 
 ### Bug Fixes
