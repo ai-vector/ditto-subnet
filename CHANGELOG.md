@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.30.0 (2026-07-25)
+
+### Features
+
+- Report whether the scorer is serving, not just what it concluded
+  ([#251](https://github.com/ditto-assistant/ditto-subnet/pull/251),
+  [`24abdaf`](https://github.com/ditto-assistant/ditto-subnet/commit/24abdafda56b0115bf23ce96e8c273c86c7d616b))
+
+
 ## v0.29.8 (2026-07-25)
 
 ### Bug Fixes
