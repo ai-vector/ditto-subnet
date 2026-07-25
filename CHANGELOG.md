@@ -2,6 +2,20 @@
 
 <!-- version list -->
 
+## v0.31.0 (2026-07-25)
+
+### Bug Fixes
+
+- Repin dittobench api ([#262](https://github.com/ditto-assistant/ditto-subnet/pull/262),
+  [`8cf05f1`](https://github.com/ditto-assistant/ditto-subnet/commit/8cf05f178e8956d3dc6097030e69e29feef43250))
+
+### Features
+
+- **validator**: Expose hosted v7 parallelism per host, keep the Ollama lane pinned
+  ([#261](https://github.com/ditto-assistant/ditto-subnet/pull/261),
+  [`2864af0`](https://github.com/ditto-assistant/ditto-subnet/commit/2864af0041f3193f940e971827ef1edf31ad59a2))
+
+
 ## v0.30.5 (2026-07-25)
 
 ### Bug Fixes
