@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.30.3 (2026-07-25)
+
+### Bug Fixes
+
+- **validator**: Default the inference base URL to the host production mints
+  ([#257](https://github.com/ditto-assistant/ditto-subnet/pull/257),
+  [`78da2ff`](https://github.com/ditto-assistant/ditto-subnet/commit/78da2ffe95fa84b5f13d4158388fefdcd367690b))
+
+
 ## v0.30.2 (2026-07-25)
 
 ### Bug Fixes
