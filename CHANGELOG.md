@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.30.5 (2026-07-25)
+
+### Bug Fixes
+
+- **validator**: Publish the generating_dataset progress stage
+  ([#260](https://github.com/ditto-assistant/ditto-subnet/pull/260),
+  [`b7d8555`](https://github.com/ditto-assistant/ditto-subnet/commit/b7d85557759cdece5439c83b1f993425007d43b2))
+
+
 ## v0.30.4 (2026-07-25)
 
 ### Bug Fixes
