@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.29.5 (2026-07-25)
+
+### Bug Fixes
+
+- Stop descriptive scorer metadata from disabling bench v7
+  ([#248](https://github.com/ditto-assistant/ditto-subnet/pull/248),
+  [`7f8fa49`](https://github.com/ditto-assistant/ditto-subnet/commit/7f8fa49901da26c7d0236525eef679956910d189))
+
+
 ## v0.29.4 (2026-07-25)
 
 ### Bug Fixes
