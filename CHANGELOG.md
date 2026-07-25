@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.29.7 (2026-07-25)
+
+### Bug Fixes
+
+- Set the scorer's platform inference proxy URL (and move it to dittobench.ai)
+  ([#252](https://github.com/ditto-assistant/ditto-subnet/pull/252),
+  [`5a5123c`](https://github.com/ditto-assistant/ditto-subnet/commit/5a5123cf41d520b59b5f41f383180260f1863c48))
+
+
 ## v0.29.6 (2026-07-25)
 
 ### Bug Fixes
