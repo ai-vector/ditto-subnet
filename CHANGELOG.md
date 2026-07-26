@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.33.3 (2026-07-26)
+
+### Bug Fixes
+
+- **validator**: Report retest progress on the slot the platform leased
+  ([#270](https://github.com/ditto-assistant/ditto-subnet/pull/270),
+  [`76a8fea`](https://github.com/ditto-assistant/ditto-subnet/commit/76a8fea3b18d6aaa02418c24ab1f2ec46e1a1b0d))
+
+
 ## v0.33.2 (2026-07-26)
 
 ### Bug Fixes
