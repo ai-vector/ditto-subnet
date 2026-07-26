@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.34.1 (2026-07-26)
+
+### Bug Fixes
+
+- **validator**: Resume weights on the epoch remainder after a drain
+  ([#273](https://github.com/ditto-assistant/ditto-subnet/pull/273),
+  [`f209378`](https://github.com/ditto-assistant/ditto-subnet/commit/f20937889a06b91c5dfdc0673117d7ec126f8ca3))
+
+
 ## v0.34.0 (2026-07-26)
 
 ### Features
