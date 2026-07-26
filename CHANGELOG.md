@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.34.0 (2026-07-26)
+
+### Features
+
+- **validator**: Plan the retest round the operator asked for
+  ([#269](https://github.com/ditto-assistant/ditto-subnet/pull/269),
+  [`db9daff`](https://github.com/ditto-assistant/ditto-subnet/commit/db9daff5678da40e837718cfb4582d340f8da26c))
+
+
 ## v0.33.3 (2026-07-26)
 
 ### Bug Fixes
