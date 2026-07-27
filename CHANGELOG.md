@@ -2,6 +2,21 @@
 
 <!-- version list -->
 
+## v0.35.0 (2026-07-27)
+
+### Chores
+
+- **miner**: Publish the score-to-incentive propagation SLA
+  ([#272](https://github.com/ditto-assistant/ditto-subnet/pull/272),
+  [`50a69ec`](https://github.com/ditto-assistant/ditto-subnet/commit/50a69ecdde04a9a91e03be04800156ef3a240d6a))
+
+### Features
+
+- **validator**: Report a leased slot from the moment it is claimed (v16)
+  ([#274](https://github.com/ditto-assistant/ditto-subnet/pull/274),
+  [`445e8a1`](https://github.com/ditto-assistant/ditto-subnet/commit/445e8a19ba77cb3820fa5f7947374362b3d7aadf))
+
+
 ## v0.34.1 (2026-07-26)
 
 ### Bug Fixes
