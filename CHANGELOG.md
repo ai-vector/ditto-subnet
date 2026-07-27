@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.35.2 (2026-07-27)
+
+### Bug Fixes
+
+- **validator**: Report which failure killed the run, not just its class
+  ([#282](https://github.com/ditto-assistant/ditto-subnet/pull/282),
+  [`7f81e0f`](https://github.com/ditto-assistant/ditto-subnet/commit/7f81e0f177ca704ba63cfb2ed135a0c24a36376d))
+
+
 ## v0.35.1 (2026-07-27)
 
 ### Bug Fixes
