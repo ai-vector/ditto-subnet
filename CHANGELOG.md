@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.36.0 (2026-07-27)
+
+### Features
+
+- **validator**: Advertise the protocol maximum eight slots
+  ([#280](https://github.com/ditto-assistant/ditto-subnet/pull/280),
+  [`08959ec`](https://github.com/ditto-assistant/ditto-subnet/commit/08959ecd14bd82af41f03425c5c475502a4978c7))
+
+
 ## v0.35.2 (2026-07-27)
 
 ### Bug Fixes
