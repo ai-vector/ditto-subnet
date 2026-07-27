@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.35.1 (2026-07-27)
+
+### Bug Fixes
+
+- **validator**: Resolve every ticket before its lease expires
+  ([#279](https://github.com/ditto-assistant/ditto-subnet/pull/279),
+  [`f9e9ccf`](https://github.com/ditto-assistant/ditto-subnet/commit/f9e9ccfb918791f45ff54d072770892406a83dcd))
+
+
 ## v0.35.0 (2026-07-27)
 
 ### Chores
