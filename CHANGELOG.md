@@ -2,6 +2,20 @@
 
 <!-- version list -->
 
+## v0.37.0 (2026-07-28)
+
+### Bug Fixes
+
+- Repin dittobench api ([#285](https://github.com/ditto-assistant/ditto-subnet/pull/285),
+  [`e908e86`](https://github.com/ditto-assistant/ditto-subnet/commit/e908e862f47ce71a8941825b17441fc2aeccbf6a))
+
+### Features
+
+- **validator**: Cancel a run whose lease the platform revoked (heartbeat v17)
+  ([#284](https://github.com/ditto-assistant/ditto-subnet/pull/284),
+  [`de6b893`](https://github.com/ditto-assistant/ditto-subnet/commit/de6b8934a7a96426a8210224d4345ad49a712cfe))
+
+
 ## v0.36.0 (2026-07-27)
 
 ### Features
