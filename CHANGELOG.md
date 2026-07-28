@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.37.1 (2026-07-28)
+
+### Bug Fixes
+
+- **validator**: Stop retiring idle slots for the rest of the sweep
+  ([#287](https://github.com/ditto-assistant/ditto-subnet/pull/287),
+  [`d848a27`](https://github.com/ditto-assistant/ditto-subnet/commit/d848a271b381921d241e55ff2a6abe03cc5bbfc9))
+
+
 ## v0.37.0 (2026-07-28)
 
 ### Bug Fixes
