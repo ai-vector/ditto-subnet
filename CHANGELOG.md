@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.37.4 (2026-07-28)
+
+### Bug Fixes
+
+- **validator**: Widen failure_detail from 200 to 4096 chars
+  ([#291](https://github.com/ditto-assistant/ditto-subnet/pull/291),
+  [`1b4f031`](https://github.com/ditto-assistant/ditto-subnet/commit/1b4f031f3371bcd858971c064fe02e73a8039260))
+
+
 ## v0.37.3 (2026-07-28)
 
 ### Bug Fixes
