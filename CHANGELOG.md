@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.37.3 (2026-07-28)
+
+### Bug Fixes
+
+- **validator**: Keep agent-attributable inference declines out of no-fault
+  ([#288](https://github.com/ditto-assistant/ditto-subnet/pull/288),
+  [`77613de`](https://github.com/ditto-assistant/ditto-subnet/commit/77613de223e76f3191f06770809626fdf1e5782b))
+
+- **validator**: Stop charging screened-image acquisition to the miner
+  ([#286](https://github.com/ditto-assistant/ditto-subnet/pull/286),
+  [`b7a0e0c`](https://github.com/ditto-assistant/ditto-subnet/commit/b7a0e0c207925ea32f6bbceda047bfb2cba29322))
+
+
 ## v0.37.2 (2026-07-28)
 
 ### Bug Fixes
