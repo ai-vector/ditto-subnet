@@ -2,6 +2,25 @@
 
 <!-- version list -->
 
+## v0.40.0 (2026-07-29)
+
+### Chores
+
+- **miner**: Name the model v7 actually locks harnesses to
+  ([#276](https://github.com/ditto-assistant/ditto-subnet/pull/276),
+  [`d930817`](https://github.com/ditto-assistant/ditto-subnet/commit/d930817b6d6e0f43a57005fc58b68ef1d281a8d8))
+
+### Features
+
+- **miner-cli**: Offer owner link on wallet rotation
+  ([#298](https://github.com/ditto-assistant/ditto-subnet/pull/298),
+  [`e0bc188`](https://github.com/ditto-assistant/ditto-subnet/commit/e0bc1888a7f6e6bd2af58af1adbba3c8aa1d2296))
+
+- **validator**: Decline to claim tickets when the host is out of headroom
+  ([#283](https://github.com/ditto-assistant/ditto-subnet/pull/283),
+  [`fd3cac1`](https://github.com/ditto-assistant/ditto-subnet/commit/fd3cac1ab0dd568c5f455cb69fe7c3f0f066c2bc))
+
+
 ## v0.39.1 (2026-07-29)
 
 ### Bug Fixes
