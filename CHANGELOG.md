@@ -2,6 +2,25 @@
 
 <!-- version list -->
 
+## v0.39.0 (2026-07-29)
+
+### Chores
+
+- **miner**: Drop the preflight handler requirement
+  ([#293](https://github.com/ditto-assistant/ditto-subnet/pull/293),
+  [`5bf5f6c`](https://github.com/ditto-assistant/ditto-subnet/commit/5bf5f6c60b272b93282e7be8627c30e278fe31b7))
+
+### Features
+
+- Retire validator-local inference sidecars
+  ([#295](https://github.com/ditto-assistant/ditto-subnet/pull/295),
+  [`6ecfbe2`](https://github.com/ditto-assistant/ditto-subnet/commit/6ecfbe2d94c3bb1ee9143ad04c101b20164fe87e))
+
+- **validator**: Negotiate gated benchmark v8
+  ([#294](https://github.com/ditto-assistant/ditto-subnet/pull/294),
+  [`6182108`](https://github.com/ditto-assistant/ditto-subnet/commit/618210842c7913bd3e49ccb973db4b0f031db254))
+
+
 ## v0.38.0 (2026-07-29)
 
 ### Features
