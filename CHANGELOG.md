@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.38.0 (2026-07-29)
+
+### Features
+
+- **miner-cli**: Add `ditto attest` for symmetric owner links
+  ([#278](https://github.com/ditto-assistant/ditto-subnet/pull/278),
+  [`9c88790`](https://github.com/ditto-assistant/ditto-subnet/commit/9c8879004e49c5d15189140bd912b53484ec8b5e))
+
+
 ## v0.37.6 (2026-07-29)
 
 ### Bug Fixes
