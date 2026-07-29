@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.39.1 (2026-07-29)
+
+### Bug Fixes
+
+- **miner**: Stop reporting a banked payment credit as a new submission
+  ([#275](https://github.com/ditto-assistant/ditto-subnet/pull/275),
+  [`63e5334`](https://github.com/ditto-assistant/ditto-subnet/commit/63e5334878cbc60c60ebe0fb75895a2d5f7e2c81))
+
+
 ## v0.39.0 (2026-07-29)
 
 ### Chores
