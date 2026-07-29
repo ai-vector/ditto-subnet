@@ -243,6 +243,31 @@ class UploadAgentRejectedError(ApiResponseError):
     pass
 
 
+class AttestationRejectedError(ApiResponseError):
+    """Raised when ``/attestations/owner-link`` returns a non-2xx status.
+
+    This can happen when:
+    - Either proof does not verify against the signer it claims (the wrong
+      wallet signed a half, the half was labelled with the wrong side or key
+      kind, or the two halves were minted from different nonce / ``issued_at``
+      values).
+    - A ``coldkey`` proof names a coldkey the platform does not have bound to
+      that hotkey through a payment record, or that hotkey has no payment
+      record at all. Sign that half with the hotkey itself instead.
+    - The attestation was minted for a different netuid than the platform
+      serves.
+    - The attestation sat unsubmitted past the server's acceptance window, or
+      its ``issued_at`` is ahead of the server clock beyond the allowed skew.
+    - The nonce was already submitted (replay guard).
+    - The two hotkeys are the same key.
+
+    Nothing is recorded and no funds move when this is raised; mint a fresh
+    attestation and submit it again.
+    """
+
+    pass
+
+
 class AgentNotFoundError(ApiResponseError):
     """Raised when ``/retrieval/agent/{id}/status`` returns 404.
 
@@ -277,6 +302,21 @@ class PaymentCancelledError(MinerCliError):
     - The interactive ``Confirm payment? [y/N]`` prompt receives anything
       other than ``y`` (including empty input).
     - The user sends EOF / Ctrl-D at the prompt.
+    """
+
+    pass
+
+
+class AttestationCancelledError(MinerCliError):
+    """Raised when the miner declines the owner-link confirmation.
+
+    This can happen when:
+    - The interactive ``Submit this attestation? [y/N]`` prompt receives
+      anything other than ``y`` (including empty input).
+    - The user sends EOF / Ctrl-D at the prompt.
+
+    Both halves were signed locally but nothing was sent, so re-running the
+    command mints a fresh nonce and starts over.
     """
 
     pass

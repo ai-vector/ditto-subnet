@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import io
 import json
+from datetime import UTC, datetime
 from typing import Any
 from uuid import UUID
 
@@ -26,12 +27,16 @@ import pytest
 
 from ditto.api_models import (
     EvalPricingResponse,
+    OwnerLinkProof,
+    OwnerLinkRequest,
+    OwnerLinkResponse,
     UploadCheckRequest,
 )
 from ditto.miner_cli.api_client import ApiClient
 from ditto.miner_cli.errors import (
     AgentNotFoundError,
     ApiResponseError,
+    AttestationRejectedError,
     HotkeyAgentNotFoundError,
     PreCheckRejectedError,
     SubmissionCooldownError,
@@ -325,6 +330,103 @@ class TestAgentByHotkey:
 
         with make_client(handler) as client, pytest.raises(HotkeyAgentNotFoundError):
             client.get_agent_by_hotkey(miner_hotkey=self.HOTKEY)
+
+
+class TestOwnerLink:
+    HOTKEY_A = "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"
+    HOTKEY_B = "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty"
+    COLDKEY_B = "5FLSigC9HGRKVhB9FiEo4Y3koPsNmBmLJbpXg2mp1hXcS59Y"
+    NONCE = "2f1d5f7a-8c4b-4a2e-9f01-6b3c8d5e7a90"
+
+    def _body(self) -> OwnerLinkRequest:
+        return OwnerLinkRequest(
+            netuid=118,
+            hotkey_a=self.HOTKEY_A,
+            hotkey_b=self.HOTKEY_B,
+            nonce=UUID(self.NONCE),
+            issued_at=datetime(2026, 7, 26, 15, 4, 5, 123456, tzinfo=UTC),
+            proof_a=OwnerLinkProof(
+                key_kind="hotkey",
+                signer=self.HOTKEY_A,
+                signature="aa" * 64,
+            ),
+            proof_b=OwnerLinkProof(
+                key_kind="coldkey",
+                signer=self.COLDKEY_B,
+                signature="bb" * 64,
+            ),
+        )
+
+    def _ok_payload(self) -> dict[str, Any]:
+        return {
+            "attestation_id": "22222222-2222-2222-2222-222222222222",
+            "netuid": 118,
+            "hotkey_lo": self.HOTKEY_B,
+            "hotkey_hi": self.HOTKEY_A,
+            "evidence_grade": "mixed",
+            "created_at": "2026-07-26T15:04:06Z",
+            "scope": "plagiarism-screening-only",
+            "grants_additional_emission_slot": False,
+        }
+
+    def test_happy_path_pins_method_path_and_body(self) -> None:
+        captured: dict[str, Any] = {}
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            captured["method"] = request.method
+            captured["url"] = str(request.url)
+            captured["body"] = json.loads(request.content)
+            return httpx.Response(201, json=self._ok_payload())
+
+        with make_client(handler) as client:
+            result = client.post_owner_link(self._body())
+
+        assert captured["method"] == "POST"
+        assert captured["url"].endswith("/api/v1/attestations/owner-link")
+        # Wire body must match the platform's OwnerLinkRequest exactly.
+        assert captured["body"] == {
+            "netuid": 118,
+            "hotkey_a": self.HOTKEY_A,
+            "hotkey_b": self.HOTKEY_B,
+            "nonce": self.NONCE,
+            "issued_at": "2026-07-26T15:04:05.123456Z",
+            "proof_a": {
+                "key_kind": "hotkey",
+                "signer": self.HOTKEY_A,
+                "signature": "aa" * 64,
+            },
+            "proof_b": {
+                "key_kind": "coldkey",
+                "signer": self.COLDKEY_B,
+                "signature": "bb" * 64,
+            },
+        }
+        assert isinstance(result, OwnerLinkResponse)
+        assert result.evidence_grade == "mixed"
+        assert result.scope == "plagiarism-screening-only"
+        assert result.grants_additional_emission_slot is False
+
+    def test_200_is_also_accepted(self) -> None:
+        def handler(_request: httpx.Request) -> httpx.Response:
+            return httpx.Response(200, json=self._ok_payload())
+
+        with make_client(handler) as client:
+            result = client.post_owner_link(self._body())
+
+        assert str(result.attestation_id).startswith("22222222")
+
+    def test_rejection_raises_attestation_rejected(self) -> None:
+        def handler(_request: httpx.Request) -> httpx.Response:
+            return _envelope_response(400, 1300, "attestation has expired")
+
+        with (
+            make_client(handler) as client,
+            pytest.raises(AttestationRejectedError) as e,
+        ):
+            client.post_owner_link(self._body())
+
+        assert "400" in str(e.value)
+        assert "expired" in str(e.value)
 
 
 class TestTransportErrors:
