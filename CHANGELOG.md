@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.40.1 (2026-07-30)
+
+### Bug Fixes
+
+- Reuse payment for replacement uploads
+  ([#300](https://github.com/ditto-assistant/ditto-subnet/pull/300),
+  [`173500b`](https://github.com/ditto-assistant/ditto-subnet/commit/173500be7fe3d1ee4c018cf8cc68353e90f3490b))
+
+
 ## v0.40.0 (2026-07-29)
 
 ### Chores
