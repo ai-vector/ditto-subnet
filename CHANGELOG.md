@@ -2,6 +2,25 @@
 
 <!-- version list -->
 
+## v0.40.2 (2026-07-30)
+
+### Bug Fixes
+
+- **validator**: Fill idle slots with retest catchup
+  ([#306](https://github.com/ditto-assistant/ditto-subnet/pull/306),
+  [`a358e52`](https://github.com/ditto-assistant/ditto-subnet/commit/a358e52ec5ed52821d52a4a51d54c82dd2053dc9))
+
+### Chores
+
+- **docs**: Add owner-link signing runbook
+  ([#301](https://github.com/ditto-assistant/ditto-subnet/pull/301),
+  [`4d7f975`](https://github.com/ditto-assistant/ditto-subnet/commit/4d7f975070e2b9e4c6858dbc511cd12389cf960e))
+
+- **weights**: Lock retained-sample fold semantics
+  ([#302](https://github.com/ditto-assistant/ditto-subnet/pull/302),
+  [`feddc78`](https://github.com/ditto-assistant/ditto-subnet/commit/feddc7824bad4ad101ff1b0771b64e954eb98858))
+
+
 ## v0.40.1 (2026-07-30)
 
 ### Bug Fixes
