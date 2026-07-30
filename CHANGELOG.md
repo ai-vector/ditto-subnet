@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.40.3 (2026-07-30)
+
+### Bug Fixes
+
+- **release**: Bridge frozen managed updaters
+  ([#308](https://github.com/ditto-assistant/ditto-subnet/pull/308),
+  [`7defe30`](https://github.com/ditto-assistant/ditto-subnet/commit/7defe30b8f098df5a30f4565c82501298d567a4f))
+
+
 ## v0.40.2 (2026-07-30)
 
 ### Bug Fixes
