@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.40.4 (2026-07-30)
+
+### Bug Fixes
+
+- Keep continual retests using idle slots
+  ([#310](https://github.com/ditto-assistant/ditto-subnet/pull/310),
+  [`f9bfcfc`](https://github.com/ditto-assistant/ditto-subnet/commit/f9bfcfcb8d49c2253e1e341f466b7a22a879a863))
+
+
 ## v0.40.3 (2026-07-30)
 
 ### Bug Fixes
