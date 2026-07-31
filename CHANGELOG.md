@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.42.14 (2026-07-31)
+
+### Bug Fixes
+
+- Poll validator updates every five minutes
+  ([#330](https://github.com/ditto-assistant/ditto-subnet/pull/330),
+  [`3209b00`](https://github.com/ditto-assistant/ditto-subnet/commit/3209b000776f791c78f875c40bf9778a58976b24))
+
+
 ## v0.42.13 (2026-07-31)
 
 ### Bug Fixes
