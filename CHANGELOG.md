@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.42.1 (2026-07-31)
+
+### Bug Fixes
+
+- **release**: Preserve the retired relay bridge
+  ([#312](https://github.com/ditto-assistant/ditto-subnet/pull/312),
+  [`f7a9b86`](https://github.com/ditto-assistant/ditto-subnet/commit/f7a9b8678bf99aa880273692a3a68834228656d4))
+
+
 ## v0.42.0 (2026-07-31)
 
 ### Features
