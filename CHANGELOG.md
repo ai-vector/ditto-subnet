@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.42.5 (2026-07-31)
+
+### Bug Fixes
+
+- Gate validator releases with updater e2e
+  ([#317](https://github.com/ditto-assistant/ditto-subnet/pull/317),
+  [`10f47ab`](https://github.com/ditto-assistant/ditto-subnet/commit/10f47ab9b87ec4b2943403c647096142440980e2))
+
+
 ## v0.42.4 (2026-07-31)
 
 ### Bug Fixes
