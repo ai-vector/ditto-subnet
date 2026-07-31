@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.42.7 (2026-07-31)
+
+### Bug Fixes
+
+- **release**: Validate runtime dependencies
+  ([#321](https://github.com/ditto-assistant/ditto-subnet/pull/321),
+  [`f785da3`](https://github.com/ditto-assistant/ditto-subnet/commit/f785da3d76d96f13b5cf70cc3273aaa041f5b2f6))
+
+
 ## v0.42.6 (2026-07-31)
 
 ### Bug Fixes
