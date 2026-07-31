@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.42.12 (2026-07-31)
+
+### Bug Fixes
+
+- Allow non-root AppArmor preflight
+  ([#328](https://github.com/ditto-assistant/ditto-subnet/pull/328),
+  [`1ec4fbd`](https://github.com/ditto-assistant/ditto-subnet/commit/1ec4fbd30d689049a0fb7eb90bb141c5e6f80e95))
+
+
 ## v0.42.11 (2026-07-31)
 
 ### Bug Fixes
