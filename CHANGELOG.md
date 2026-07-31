@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.42.6 (2026-07-31)
+
+### Bug Fixes
+
+- Retry transient stack dependency readiness
+  ([#319](https://github.com/ditto-assistant/ditto-subnet/pull/319),
+  [`84801a5`](https://github.com/ditto-assistant/ditto-subnet/commit/84801a504097406164f0dd672e763eca2823d252))
+
+
 ## v0.42.5 (2026-07-31)
 
 ### Bug Fixes
