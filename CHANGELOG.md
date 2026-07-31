@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.42.9 (2026-07-31)
+
+### Bug Fixes
+
+- Support restricted AppArmor user namespaces
+  ([#325](https://github.com/ditto-assistant/ditto-subnet/pull/325),
+  [`c2946cb`](https://github.com/ditto-assistant/ditto-subnet/commit/c2946cb9415fdd82f60259e772f42e649bb3fab4))
+
+
 ## v0.42.8 (2026-07-31)
 
 ### Bug Fixes
