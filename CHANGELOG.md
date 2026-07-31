@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.41.0 (2026-07-31)
+
+### Features
+
+- **docs**: Make harness submissions language-neutral
+  ([#303](https://github.com/ditto-assistant/ditto-subnet/pull/303),
+  [`b148951`](https://github.com/ditto-assistant/ditto-subnet/commit/b148951f9fe2a4f66293fcab0586c16f25c6adff))
+
+
 ## v0.40.5 (2026-07-31)
 
 ### Bug Fixes
