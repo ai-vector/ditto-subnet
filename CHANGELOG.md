@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.42.8 (2026-07-31)
+
+### Bug Fixes
+
+- **release**: Preserve sandbox security defaults
+  ([#323](https://github.com/ditto-assistant/ditto-subnet/pull/323),
+  [`7e630c1`](https://github.com/ditto-assistant/ditto-subnet/commit/7e630c1964c9123cd44334e2a91fcc7884d7d0bb))
+
+
 ## v0.42.7 (2026-07-31)
 
 ### Bug Fixes
