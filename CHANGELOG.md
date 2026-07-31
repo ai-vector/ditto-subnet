@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.42.13 (2026-07-31)
+
+### Bug Fixes
+
+- Defer unreadable AppArmor state to Docker
+  ([#329](https://github.com/ditto-assistant/ditto-subnet/pull/329),
+  [`762a9a9`](https://github.com/ditto-assistant/ditto-subnet/commit/762a9a9f31add31f6f518cf250ba0adea2bd9141))
+
+
 ## v0.42.12 (2026-07-31)
 
 ### Bug Fixes
