@@ -2,6 +2,20 @@
 
 <!-- version list -->
 
+## v0.42.2 (2026-07-31)
+
+### Bug Fixes
+
+- Repin dittobench api ([#314](https://github.com/ditto-assistant/ditto-subnet/pull/314),
+  [`5d0553d`](https://github.com/ditto-assistant/ditto-subnet/commit/5d0553d7f4ded1c8c0a41a73323e85db58bf890b))
+
+### Chores
+
+- **v8**: Repin ordered world evidence
+  ([#313](https://github.com/ditto-assistant/ditto-subnet/pull/313),
+  [`b5a953a`](https://github.com/ditto-assistant/ditto-subnet/commit/b5a953a1e734200aba31ec1207731a246c0ff23d))
+
+
 ## v0.42.1 (2026-07-31)
 
 ### Bug Fixes
