@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.42.10 (2026-07-31)
+
+### Bug Fixes
+
+- Reacquire pruned stack descriptors
+  ([#326](https://github.com/ditto-assistant/ditto-subnet/pull/326),
+  [`8254066`](https://github.com/ditto-assistant/ditto-subnet/commit/8254066c44028d402c0f23499788838494e4fe73))
+
+
 ## v0.42.9 (2026-07-31)
 
 ### Bug Fixes
