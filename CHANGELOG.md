@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.42.3 (2026-07-31)
+
+### Bug Fixes
+
+- **release**: Restore frozen updater compatibility
+  ([#315](https://github.com/ditto-assistant/ditto-subnet/pull/315),
+  [`adeb108`](https://github.com/ditto-assistant/ditto-subnet/commit/adeb108ebcdcc8334d0728e011c4323edf0a6073))
+
+
 ## v0.42.2 (2026-07-31)
 
 ### Bug Fixes
