@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.42.4 (2026-07-31)
+
+### Bug Fixes
+
+- Support four-core validator hosts
+  ([#316](https://github.com/ditto-assistant/ditto-subnet/pull/316),
+  [`1b2925d`](https://github.com/ditto-assistant/ditto-subnet/commit/1b2925d5861f4ecffbb1f9f45fb827d1a1b22240))
+
+
 ## v0.42.3 (2026-07-31)
 
 ### Bug Fixes
