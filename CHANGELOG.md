@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.42.0 (2026-07-31)
+
+### Features
+
+- **validator**: Isolate v8 harness execution
+  ([#304](https://github.com/ditto-assistant/ditto-subnet/pull/304),
+  [`6dc3911`](https://github.com/ditto-assistant/ditto-subnet/commit/6dc3911393fa71f018e37a3149628e765f4d8090))
+
+
 ## v0.41.0 (2026-07-31)
 
 ### Features
