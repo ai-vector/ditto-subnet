@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.42.15 (2026-07-31)
+
+### Bug Fixes
+
+- Retain portable screened image identity
+  ([#331](https://github.com/ditto-assistant/ditto-subnet/pull/331),
+  [`21affa3`](https://github.com/ditto-assistant/ditto-subnet/commit/21affa38f79d7089c9713e0bed1f5f16e4b100e1))
+
+- **validator**: Restore v0.41 sandbox compatibility
+  ([#332](https://github.com/ditto-assistant/ditto-subnet/pull/332),
+  [`3c876d6`](https://github.com/ditto-assistant/ditto-subnet/commit/3c876d655e95aec67d06f54aebe0e4d253082132))
+
+
 ## v0.42.14 (2026-07-31)
 
 ### Bug Fixes
