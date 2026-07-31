@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.40.5 (2026-07-31)
+
+### Bug Fixes
+
+- Dispatch retests from idle validator slots
+  ([#311](https://github.com/ditto-assistant/ditto-subnet/pull/311),
+  [`1d69300`](https://github.com/ditto-assistant/ditto-subnet/commit/1d693003ab4776aa8efb5d4c13ed37a05da25153))
+
+- Probe live sandbox namespace health
+  ([#309](https://github.com/ditto-assistant/ditto-subnet/pull/309),
+  [`60c28b1`](https://github.com/ditto-assistant/ditto-subnet/commit/60c28b173c3f38a0a4ad0f9127904864c9e480c3))
+
+
 ## v0.40.4 (2026-07-30)
 
 ### Bug Fixes
