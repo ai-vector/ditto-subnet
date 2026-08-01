@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.43.1 (2026-08-01)
+
+### Bug Fixes
+
+- Clarify TAO fee and paid retry windows
+  ([#340](https://github.com/ditto-assistant/ditto-subnet/pull/340),
+  [`dc8dc34`](https://github.com/ditto-assistant/ditto-subnet/commit/dc8dc34aa88c0f53e1f920d5f9ad87fa99978888))
+
+
 ## v0.43.0 (2026-08-01)
 
 ### Chores
