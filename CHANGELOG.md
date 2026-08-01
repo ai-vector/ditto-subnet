@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.42.17 (2026-08-01)
+
+### Bug Fixes
+
+- **validator**: Retain delayed progress heartbeats
+  ([#336](https://github.com/ditto-assistant/ditto-subnet/pull/336),
+  [`e8446ae`](https://github.com/ditto-assistant/ditto-subnet/commit/e8446ae6417e362e30dbaee33bd9df699fd592cd))
+
+
 ## v0.42.16 (2026-07-31)
 
 ### Bug Fixes
