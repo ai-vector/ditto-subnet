@@ -2,6 +2,21 @@
 
 <!-- version list -->
 
+## v0.43.0 (2026-08-01)
+
+### Chores
+
+- **tests**: Allow repeated monotonic progress heartbeats
+  ([#338](https://github.com/ditto-assistant/ditto-subnet/pull/338),
+  [`333f83b`](https://github.com/ditto-assistant/ditto-subnet/commit/333f83bb362d07681ec6fca6a28d84de6eca47f2))
+
+### Features
+
+- Fold relative efficiency after continual scores
+  ([#318](https://github.com/ditto-assistant/ditto-subnet/pull/318),
+  [`e71b25b`](https://github.com/ditto-assistant/ditto-subnet/commit/e71b25b5058c55cb146cafcd0b5690d41a5defb7))
+
+
 ## v0.42.18 (2026-08-01)
 
 ### Bug Fixes
