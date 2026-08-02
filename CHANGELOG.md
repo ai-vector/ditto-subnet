@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.43.3 (2026-08-02)
+
+### Bug Fixes
+
+- Retry transient inference exchange failures
+  ([#343](https://github.com/ditto-assistant/ditto-subnet/pull/343),
+  [`5f6f012`](https://github.com/ditto-assistant/ditto-subnet/commit/5f6f012be7c457872e131e20141d2d206216dd46))
+
+
 ## v0.43.2 (2026-08-02)
 
 ### Bug Fixes
