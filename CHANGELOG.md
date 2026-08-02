@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.43.5 (2026-08-02)
+
+### Bug Fixes
+
+- Route inference over the direct platform origin
+  ([#355](https://github.com/ditto-assistant/ditto-subnet/pull/355),
+  [`468e513`](https://github.com/ditto-assistant/ditto-subnet/commit/468e5131b80238ed4a1c608af484eeb77a4acf1c))
+
+
 ## v0.43.4 (2026-08-02)
 
 ### Bug Fixes
