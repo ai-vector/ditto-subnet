@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.43.2 (2026-08-02)
+
+### Bug Fixes
+
+- Let miners replace rejected payments
+  ([#342](https://github.com/ditto-assistant/ditto-subnet/pull/342),
+  [`9e01fcc`](https://github.com/ditto-assistant/ditto-subnet/commit/9e01fccc45a917558542f5b684e54ae977916829))
+
+
 ## v0.43.1 (2026-08-01)
 
 ### Bug Fixes
