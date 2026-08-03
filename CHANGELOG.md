@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.43.15 (2026-08-03)
+
+### Bug Fixes
+
+- Ship patched Pylon weight transport
+  ([#367](https://github.com/ditto-assistant/ditto-subnet/pull/367),
+  [`75c5f02`](https://github.com/ditto-assistant/ditto-subnet/commit/75c5f023cfe86d17a75da29fb71452423772d5a0))
+
+
 ## v0.43.14 (2026-08-03)
 
 ### Bug Fixes
