@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.43.14 (2026-08-03)
+
+### Bug Fixes
+
+- Recover verified interrupted source updates
+  ([#365](https://github.com/ditto-assistant/ditto-subnet/pull/365),
+  [`09c2e06`](https://github.com/ditto-assistant/ditto-subnet/commit/09c2e06322f2f7a1d877aee99606292312090aad))
+
+
 ## v0.43.13 (2026-08-03)
 
 ### Bug Fixes
