@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.43.9 (2026-08-03)
+
+### Bug Fixes
+
+- Honor elastic continual retest ceiling
+  ([#360](https://github.com/ditto-assistant/ditto-subnet/pull/360),
+  [`2ce7d7b`](https://github.com/ditto-assistant/ditto-subnet/commit/2ce7d7ba90da765bbdb06efe60050eff13e9ffff))
+
+
 ## v0.43.8 (2026-08-03)
 
 ### Bug Fixes
