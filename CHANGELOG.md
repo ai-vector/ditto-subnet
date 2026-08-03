@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.43.8 (2026-08-03)
+
+### Bug Fixes
+
+- Repin dittobench api ([#358](https://github.com/ditto-assistant/ditto-subnet/pull/358),
+  [`b9e7314`](https://github.com/ditto-assistant/ditto-subnet/commit/b9e7314aa66714f1e983db83197c2ae6be5cae2f))
+
+
 ## v0.43.7 (2026-08-03)
 
 ### Bug Fixes
