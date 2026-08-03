@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.43.10 (2026-08-03)
+
+### Bug Fixes
+
+- Drain source stack before scorer replacement
+  ([#359](https://github.com/ditto-assistant/ditto-subnet/pull/359),
+  [`81775cc`](https://github.com/ditto-assistant/ditto-subnet/commit/81775cc021b79ab3215253d46e6902b185874d1f))
+
+
 ## v0.43.9 (2026-08-03)
 
 ### Bug Fixes
