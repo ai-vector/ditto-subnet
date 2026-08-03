@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.43.13 (2026-08-03)
+
+### Bug Fixes
+
+- **validator**: Keep idle slots through concurrent claim races
+  ([#364](https://github.com/ditto-assistant/ditto-subnet/pull/364),
+  [`3edf478`](https://github.com/ditto-assistant/ditto-subnet/commit/3edf4782f4c03fad9edc7257169024cd778be40c))
+
+
 ## v0.43.12 (2026-08-03)
 
 ### Bug Fixes
