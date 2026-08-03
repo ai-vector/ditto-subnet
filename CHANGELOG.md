@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.43.12 (2026-08-03)
+
+### Bug Fixes
+
+- Route hardcoded OpenRouter through scorer shim
+  ([#362](https://github.com/ditto-assistant/ditto-subnet/pull/362),
+  [`8cb5817`](https://github.com/ditto-assistant/ditto-subnet/commit/8cb58176168243bf5263727f5c7f5a62666d06c6))
+
+
 ## v0.43.11 (2026-08-03)
 
 ### Bug Fixes
