@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.43.7 (2026-08-03)
+
+### Bug Fixes
+
+- Report relay recovery waits in validator heartbeats
+  ([#357](https://github.com/ditto-assistant/ditto-subnet/pull/357),
+  [`cee7aac`](https://github.com/ditto-assistant/ditto-subnet/commit/cee7aac1a0c856cccf95a5e1f6e729e39feca9e8))
+
+
 ## v0.43.6 (2026-08-02)
 
 ### Bug Fixes
