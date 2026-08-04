@@ -2,6 +2,25 @@
 
 <!-- version list -->
 
+## v0.44.0 (2026-08-04)
+
+### Chores
+
+- **docs**: Align owner-link copy policy
+  ([#307](https://github.com/ditto-assistant/ditto-subnet/pull/307),
+  [`ffefa97`](https://github.com/ditto-assistant/ditto-subnet/commit/ffefa976962a64884cd39ab2501a0e9e02a70079))
+
+- **security**: Lock CI supply chain inputs
+  ([#324](https://github.com/ditto-assistant/ditto-subnet/pull/324),
+  [`41b2926`](https://github.com/ditto-assistant/ditto-subnet/commit/41b29262988e564cfe64757e6422e475f6d7a548))
+
+### Features
+
+- **validator**: Retire pre-v8 scoring paths
+  ([#370](https://github.com/ditto-assistant/ditto-subnet/pull/370),
+  [`83a2c6b`](https://github.com/ditto-assistant/ditto-subnet/commit/83a2c6b61ce2b5ffd020e67a44cdc536683418f7))
+
+
 ## v0.43.17 (2026-08-04)
 
 ### Bug Fixes
