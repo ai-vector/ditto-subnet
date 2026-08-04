@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.44.1 (2026-08-04)
+
+### Bug Fixes
+
+- Restore v8 scorer negotiation on rolling upgrades
+  ([#374](https://github.com/ditto-assistant/ditto-subnet/pull/374),
+  [`fc694c7`](https://github.com/ditto-assistant/ditto-subnet/commit/fc694c7908817019018fa993a34f93110afc374d))
+
+
 ## v0.44.0 (2026-08-04)
 
 ### Chores
