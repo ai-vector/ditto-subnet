@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.43.16 (2026-08-04)
+
+### Bug Fixes
+
+- **validator**: Recover orphaned bootstrap drains
+  ([#366](https://github.com/ditto-assistant/ditto-subnet/pull/366),
+  [`863011c`](https://github.com/ditto-assistant/ditto-subnet/commit/863011c830832f2e8c12dad5603578af6a2d822b))
+
+
 ## v0.43.15 (2026-08-03)
 
 ### Bug Fixes
