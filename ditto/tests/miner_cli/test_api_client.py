@@ -385,6 +385,7 @@ class TestOwnerLink:
             "hotkey_hi": self.HOTKEY_A,
             "evidence_grade": "mixed",
             "created_at": "2026-07-26T15:04:06Z",
+            "cleared_copy_review_count": 2,
             "scope": "plagiarism-screening-only",
             "grants_additional_emission_slot": False,
         }
@@ -424,6 +425,7 @@ class TestOwnerLink:
         assert isinstance(result, OwnerLinkResponse)
         assert result.evidence_grade == "mixed"
         assert result.scope == "plagiarism-screening-only"
+        assert result.cleared_copy_review_count == 2
         assert result.grants_additional_emission_slot is False
 
     def test_200_is_also_accepted(self) -> None:
