@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.44.3 (2026-08-05)
+
+### Bug Fixes
+
+- Preserve inference allowance failures
+  ([#369](https://github.com/ditto-assistant/ditto-subnet/pull/369),
+  [`3407969`](https://github.com/ditto-assistant/ditto-subnet/commit/340796919e4c460fe8b9c776ff6fb6560042ff80))
+
+
 ## v0.44.2 (2026-08-05)
 
 ### Bug Fixes
