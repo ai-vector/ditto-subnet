@@ -20,10 +20,10 @@ env:
   MODEL_RELAY_REPOSITORY: ghcr.io/ditto-assistant/dittobench-api-relay
   PYLON_REPOSITORY: ghcr.io/ditto-assistant/ditto-subnet-pylon
   # Frozen compat-2 updaters still require a relay-shaped image in their signed
-  # descriptor. Build that isolated shim from the final reviewed API revision
-  # that still contained the relay target; current API source intentionally does
-  # not carry or execute the retired validator-owned inference path.
+  # descriptor. Its final reviewed source is vendored below the active API so a
+  # release never depends on the availability or permissions of another repo.
   MODEL_RELAY_COMPAT_REVISION: c0cac04970523326738cc704aa1bd60cd2623b22
+  MODEL_RELAY_COMPAT_DIR: services/dittobench-api/compat/model-relay
   STACK_REPOSITORY: ghcr.io/ditto-assistant/ditto-subnet-stack
   PYLON_BASE_IMAGE: docker.io/backenddevelopersltd/bittensor-pylon@sha256:ba6ba5e3e7b32683f90039eb5a37a565d5479f034326b40288869f826f7362c7
   PYLON_TURBOBT_REVISION: d36d1a28e761ff9d743bbcc83d091309c4d3599e
@@ -311,7 +311,7 @@ jobs:
       id-token: write
     outputs:
       revision: ${{ steps.dittobench-source.outputs.revision }}
-      relay_compat_revision: ${{ steps.dittobench-source.outputs.relay_compat_revision }}
+      relay_compat_revision: ${{ steps.relay-source.outputs.relay_compat_revision }}
       scorer_digest: ${{ steps.dittobench-api.outputs.digest }}
       relay_digest: ${{ steps.model-relay.outputs.digest }}
     steps:
@@ -321,47 +321,35 @@ jobs:
           ref: ${{ needs.release.outputs.commit_sha }}
           persist-credentials: false
 
-      - name: Materialize the reviewed dittobench-api source
+      - name: Bind DittoBench to the monorepo release
         id: dittobench-source
         run: |
-          context="$(
-            grep -Eo \
-              'https://github\.com/ditto-assistant/dittobench-api\.git\?ref=refs/heads/main&checksum=[0-9a-f]{40}' \
-              docker-compose.yml | sort -u
-          )"
-          test -n "$context"
-          test "$(wc -l <<<"$context" | tr -d ' ')" = 1
-          revision="${context##*checksum=}"
+          revision="$(git log -1 --format=%H -- services/dittobench-api)"
           [[ "$revision" =~ ^[0-9a-f]{40}$ ]]
-          git clone --quiet --filter=blob:none \
-            https://github.com/ditto-assistant/dittobench-api.git \
-            "$RUNNER_TEMP/dittobench-source"
-          git -C "$RUNNER_TEMP/dittobench-source" cat-file -e "$revision^{commit}"
-          git -C "$RUNNER_TEMP/dittobench-source" merge-base --is-ancestor \
-            "$revision" origin/main
-          git -C "$RUNNER_TEMP/dittobench-source" checkout --quiet --detach "$revision"
-          test -z "$(git -C "$RUNNER_TEMP/dittobench-source" status --porcelain)"
+          git merge-base --is-ancestor "$revision" HEAD
+          test -f services/dittobench-api/Dockerfile
+          test -f services/dittobench-api/go.mod
           printf 'revision=%s\n' "$revision" >>"$GITHUB_OUTPUT"
 
+      - name: Materialize the retired relay compatibility source
+        id: relay-source
+        run: |
           relay_revision="$MODEL_RELAY_COMPAT_REVISION"
           [[ "$relay_revision" =~ ^[0-9a-f]{40}$ ]]
-          git -C "$RUNNER_TEMP/dittobench-source" cat-file -e "$relay_revision^{commit}"
-          git -C "$RUNNER_TEMP/dittobench-source" merge-base --is-ancestor \
-            "$relay_revision" origin/main
-          git -C "$RUNNER_TEMP/dittobench-source" worktree add --quiet --detach \
-            "$RUNNER_TEMP/model-relay-source" "$relay_revision"
-          grep -q '^FROM .* AS relay$' "$RUNNER_TEMP/model-relay-source/Dockerfile"
-          test -z "$(git -C "$RUNNER_TEMP/model-relay-source" status --porcelain)"
+          test "$(cat "$MODEL_RELAY_COMPAT_DIR/UPSTREAM_REVISION")" = \
+            "$relay_revision"
+          grep -q '^FROM .* AS relay$' "$MODEL_RELAY_COMPAT_DIR/Dockerfile"
+          (cd "$MODEL_RELAY_COMPAT_DIR" && sha256sum --check SHA256SUMS)
           printf 'relay_compat_revision=%s\n' "$relay_revision" >>"$GITHUB_OUTPUT"
 
       - name: Set up the scorer toolchain
         uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5
         with:
           go-version: "1.23"
-          cache-dependency-path: ${{ runner.temp }}/dittobench-source/go.sum
+          cache-dependency-path: services/dittobench-api/go.sum
 
       - name: Verify the exact dittobench-api source
-        working-directory: ${{ runner.temp }}/dittobench-source
+        working-directory: services/dittobench-api
         run: go test ./...
 
       - name: Set up QEMU for both release platforms
@@ -381,8 +369,8 @@ jobs:
         id: dittobench-api
         uses: useblacksmith/build-push-action@9b0579bbec7a6cad2f171596c57e7ac1e7658850 # v2.3.0
         with:
-          context: ${{ runner.temp }}/dittobench-source
-          file: ${{ runner.temp }}/dittobench-source/Dockerfile
+          context: services/dittobench-api
+          file: services/dittobench-api/Dockerfile
           target: sandbox
           platforms: linux/amd64,linux/arm64
           push: true
@@ -394,7 +382,7 @@ jobs:
             DITTOBENCH_SOURCE_SHA=${{ steps.dittobench-source.outputs.revision }}
             DITTOBENCH_SOFTWARE_VERSION=${{ needs.release.outputs.version }}
           labels: |
-            org.opencontainers.image.source=https://github.com/ditto-assistant/dittobench-api
+            org.opencontainers.image.source=https://github.com/ditto-assistant/ditto-subnet
             org.opencontainers.image.version=${{ needs.release.outputs.version }}
             org.opencontainers.image.revision=${{ steps.dittobench-source.outputs.revision }}
             io.heyditto.validator.stack-version=${{ needs.release.outputs.version }}
@@ -410,8 +398,8 @@ jobs:
         id: model-relay
         uses: useblacksmith/build-push-action@9b0579bbec7a6cad2f171596c57e7ac1e7658850 # v2.3.0
         with:
-          context: ${{ runner.temp }}/model-relay-source
-          file: ${{ runner.temp }}/model-relay-source/Dockerfile
+          context: ${{ env.MODEL_RELAY_COMPAT_DIR }}
+          file: ${{ env.MODEL_RELAY_COMPAT_DIR }}/Dockerfile
           target: relay
           platforms: linux/amd64,linux/arm64
           push: true
@@ -419,10 +407,10 @@ jobs:
           # advertise the descriptor's active dittobench revision. Preserve
           # the bridge's actual frozen source in a separate label.
           labels: |
-            org.opencontainers.image.source=https://github.com/ditto-assistant/dittobench-api
+            org.opencontainers.image.source=https://github.com/ditto-assistant/ditto-subnet/tree/${{ needs.release.outputs.commit_sha }}/services/dittobench-api/compat/model-relay
             org.opencontainers.image.version=${{ needs.release.outputs.version }}
             org.opencontainers.image.revision=${{ steps.dittobench-source.outputs.revision }}
-            io.heyditto.validator.compat-source-revision=${{ steps.dittobench-source.outputs.relay_compat_revision }}
+            io.heyditto.validator.compat-source-revision=${{ steps.relay-source.outputs.relay_compat_revision }}
             io.heyditto.validator.stack-version=${{ needs.release.outputs.version }}
             io.heyditto.validator.stack-revision=${{ needs.release.outputs.commit_sha }}
             io.heyditto.validator.stack-service=model-relay
@@ -503,7 +491,7 @@ jobs:
           declare -A sources=(
             ["$VALIDATOR_REPOSITORY"]="https://github.com/ditto-assistant/ditto-subnet"
             ["$SANDBOX_DOCKER_REPOSITORY"]="https://github.com/ditto-assistant/ditto-subnet"
-            ["$DITTOBENCH_API_REPOSITORY"]="https://github.com/ditto-assistant/dittobench-api"
+            ["$DITTOBENCH_API_REPOSITORY"]="https://github.com/ditto-assistant/ditto-subnet"
             ["$MODEL_RELAY_REPOSITORY"]="https://github.com/ditto-assistant/dittobench-api"
           )
           declare -A revisions=(

@@ -23,6 +23,10 @@ ignored_paths = [
   "scripts/check_netns_incompatible.py",
   "scripts/gen_validator_contract.py",
   "scripts/run-validator.sh",
+  "services/dittobench-api/docs/**",
+  "services/dittobench-api/*.md",
+  "services/dittobench-api/.gitignore",
+  "services/dittobench-api/LICENSE",
   "tests/**",
   "skills-lock.json",
 ]
@@ -72,9 +76,24 @@ paths = [
   "scripts/sandbox-docker-entrypoint.sh",
 ]
 
+[components.dittobench_api]
+description = "DittoBench scorer and hosted API"
+paths = [
+  "services/dittobench-api/Dockerfile*",
+  "services/dittobench-api/calibration/**",
+  "services/dittobench-api/cmd/**",
+  "services/dittobench-api/compat/**",
+  "services/dittobench-api/go.mod",
+  "services/dittobench-api/go.sum",
+  "services/dittobench-api/integrations/**",
+  "services/dittobench-api/internal/**",
+  "services/dittobench-api/scripts/**",
+  "services/dittobench-api/skills-lock.json",
+]
+
 [components.validator_stack]
 description = "Signed, digest-bound validator stack"
-depends_on = ["validator", "sandbox_docker"]
+depends_on = ["validator", "sandbox_docker", "dittobench_api"]
 paths = [
   ".dockerignore",
   ".github/workflows/release.yml",
