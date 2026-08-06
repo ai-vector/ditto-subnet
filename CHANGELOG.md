@@ -2,6 +2,21 @@
 
 <!-- version list -->
 
+## v0.45.1 (2026-08-06)
+
+### Bug Fixes
+
+- **release**: Verify vendored relay source label
+  ([#413](https://github.com/ditto-assistant/ditto-subnet/pull/413),
+  [`8b04361`](https://github.com/ditto-assistant/ditto-subnet/commit/8b04361663f4731733094a90c9dbe71d12787626))
+
+### Chores
+
+- **ci**: Scope docker layer caches per release image
+  ([#415](https://github.com/ditto-assistant/ditto-subnet/pull/415),
+  [`c7c226a`](https://github.com/ditto-assistant/ditto-subnet/commit/c7c226ad448c9a4fff3360c9ec24d5a94bf77ed4))
+
+
 ## v0.45.0 (2026-08-06)
 
 ### Bug Fixes
