@@ -2,6 +2,124 @@
 
 <!-- version list -->
 
+## v0.45.0 (2026-08-06)
+
+### Bug Fixes
+
+- **ci**: Pass OIDC permission to reusable deploys
+  ([#406](https://github.com/ditto-assistant/ditto-subnet/pull/406),
+  [`27b6c02`](https://github.com/ditto-assistant/ditto-subnet/commit/27b6c02105064f1da68fdacec10c18f44d49acf3))
+
+- **infra**: Fetch release ancestry before planning
+  ([#407](https://github.com/ditto-assistant/ditto-subnet/pull/407),
+  [`b568681`](https://github.com/ditto-assistant/ditto-subnet/commit/b5686810397aa0fe47ab49078431cc2190936fed))
+
+- **release**: Harden screener capacity activation
+  ([#382](https://github.com/ditto-assistant/ditto-subnet/pull/382),
+  [`512067f`](https://github.com/ditto-assistant/ditto-subnet/commit/512067f1c5842f456f67ce3d42065bb648a02599))
+
+- **release**: Require Python 3.12 for root package
+  ([#412](https://github.com/ditto-assistant/ditto-subnet/pull/412),
+  [`382b215`](https://github.com/ditto-assistant/ditto-subnet/commit/382b2153728229283c29bbf30cc3b2d49cd1cf8c))
+
+- **release**: Reuse plan history for version gate
+  ([#410](https://github.com/ditto-assistant/ditto-subnet/pull/410),
+  [`3cc77ce`](https://github.com/ditto-assistant/ditto-subnet/commit/3cc77ceaabdb1ada2506adb0248e42df43a4f10b))
+
+### Chores
+
+- Refresh starter-kit anti-copy reference
+  ([#405](https://github.com/ditto-assistant/ditto-subnet/pull/405),
+  [`e234341`](https://github.com/ditto-assistant/ditto-subnet/commit/e234341daf56e09880b211886c72d6a9ba63c421))
+
+- Simplify CODEOWNERS ownership assignments
+  ([#409](https://github.com/ditto-assistant/ditto-subnet/pull/409),
+  [`73ae003`](https://github.com/ditto-assistant/ditto-subnet/commit/73ae0036b9af4181c7cbccb5cc117620877cfa7b))
+
+- **ci**: Migrate Platform operational workflows
+  ([#352](https://github.com/ditto-assistant/ditto-subnet/pull/352),
+  [`51467b4`](https://github.com/ditto-assistant/ditto-subnet/commit/51467b41d0fe5d2c049622e3862a149897e143e7))
+
+- **deps**: Bump @tanstack/solid-query from 5.100.11 to 5.101.4 in /apps/platform/dashboard
+  ([#400](https://github.com/ditto-assistant/ditto-subnet/pull/400),
+  [`5cb2302`](https://github.com/ditto-assistant/ditto-subnet/commit/5cb2302e35d85291565c891d9486e32d5e97908c))
+
+- **deps**: Bump golang from 1.23-alpine to 1.26-alpine in /services/dittobench-api
+  ([#396](https://github.com/ditto-assistant/ditto-subnet/pull/396),
+  [`9191ee1`](https://github.com/ditto-assistant/ditto-subnet/commit/9191ee1a13c784d5059f30fdaf64fb66dc179b63))
+
+- **deps**: Bump huggingface/text-embeddings-inference from cpu-1.8.2 to cpu-1.9.3 in
+  /apps/platform/docker/embedder ([#403](https://github.com/ditto-assistant/ditto-subnet/pull/403),
+  [`411cdff`](https://github.com/ditto-assistant/ditto-subnet/commit/411cdff92f79a07bfb0f45f44dc7bdae4088b5fc))
+
+- **deps**: Bump the actions group with 14 updates
+  ([#404](https://github.com/ditto-assistant/ditto-subnet/pull/404),
+  [`42d8a39`](https://github.com/ditto-assistant/ditto-subnet/commit/42d8a39a2cf546215deaf4aaf88d6fd59584b41b))
+
+- **deps-dev**: Bump @types/node from 24.10.14 to 26.1.2 in /apps/platform/dashboard
+  ([#398](https://github.com/ditto-assistant/ditto-subnet/pull/398),
+  [`110bf16`](https://github.com/ditto-assistant/ditto-subnet/commit/110bf1600f9ec3e874da53aa2b6dcdb0371222c7))
+
+- **deps-dev**: Bump typescript from 5.9.3 to 7.0.2 in /apps/platform/dashboard
+  ([#402](https://github.com/ditto-assistant/ditto-subnet/pull/402),
+  [`17baf7a`](https://github.com/ditto-assistant/ditto-subnet/commit/17baf7a35f602e33770392c07354cf30e375aa4e))
+
+- **deps-dev**: Update setuptools requirement from <83,>=77 to >=77,<84 in
+  /services/dittobench-api/integrations/hermes
+  ([#399](https://github.com/ditto-assistant/ditto-subnet/pull/399),
+  [`31cd7f4`](https://github.com/ditto-assistant/ditto-subnet/commit/31cd7f4812b06ebbd47e63fca352cd7393fe909e))
+
+### Features
+
+- Bring miner starter kit into monorepo
+  ([#354](https://github.com/ditto-assistant/ditto-subnet/pull/354),
+  [`2c9528b`](https://github.com/ditto-assistant/ditto-subnet/commit/2c9528bf6024499ab82892a1340c72f7efb5b9ab))
+
+- Federate screener capacity across providers
+  ([#349](https://github.com/ditto-assistant/ditto-subnet/pull/349),
+  [`630e8a2`](https://github.com/ditto-assistant/ditto-subnet/commit/630e8a2428d3eacce1cb9166e5cd5df89dac165e))
+
+- Gate hosted deploys and trusted builds
+  ([#351](https://github.com/ditto-assistant/ditto-subnet/pull/351),
+  [`5e9c319`](https://github.com/ditto-assistant/ditto-subnet/commit/5e9c31959c60ff82f7c7605919cc0450f3df514c))
+
+- Migrate DittoBench datagen research
+  ([#372](https://github.com/ditto-assistant/ditto-subnet/pull/372),
+  [`b3f8080`](https://github.com/ditto-assistant/ditto-subnet/commit/b3f808089747f7cb2e93d80c88dec0cf864f3ea4))
+
+- Migrate DittoBench into subnet monorepo
+  ([#346](https://github.com/ditto-assistant/ditto-subnet/pull/346),
+  [`21dbf7f`](https://github.com/ditto-assistant/ditto-subnet/commit/21dbf7f09260fbe1dd4d27114329115109417b57))
+
+- Migrate Platform into subnet monorepo
+  ([#347](https://github.com/ditto-assistant/ditto-subnet/pull/347),
+  [`de8ab60`](https://github.com/ditto-assistant/ditto-subnet/commit/de8ab60f195a18d5d837c87c0e1da71c4dd7aec7))
+
+- Migrate screener into subnet monorepo
+  ([#348](https://github.com/ditto-assistant/ditto-subnet/pull/348),
+  [`da8d767`](https://github.com/ditto-assistant/ditto-subnet/commit/da8d76785f67cb451ad8c771ef473b049d3eced5))
+
+- Migrate subnet Backroom controls
+  ([#350](https://github.com/ditto-assistant/ditto-subnet/pull/350),
+  [`2b02d6c`](https://github.com/ditto-assistant/ditto-subnet/commit/2b02d6c1a3035d7840d8816aeb9989c6753498fe))
+
+- **agent**: Add indexed monorepo skills
+  ([#381](https://github.com/ditto-assistant/ditto-subnet/pull/381),
+  [`91eb3df`](https://github.com/ditto-assistant/ditto-subnet/commit/91eb3df2e91c046d2470b946cb1866709634e248))
+
+- **infra**: Migrate subnet runtime ownership
+  ([#371](https://github.com/ditto-assistant/ditto-subnet/pull/371),
+  [`08a9c93`](https://github.com/ditto-assistant/ditto-subnet/commit/08a9c93dfd6e2bdd967bb9961e516e51e4c4076f))
+
+- **release**: Automate subnet runtime delivery
+  ([#380](https://github.com/ditto-assistant/ditto-subnet/pull/380),
+  [`5e00eb9`](https://github.com/ditto-assistant/ditto-subnet/commit/5e00eb95fddd74b616f27ae31a07065ef8de82be))
+
+- **release**: Gate artifacts by affected component
+  ([#345](https://github.com/ditto-assistant/ditto-subnet/pull/345),
+  [`cb541e9`](https://github.com/ditto-assistant/ditto-subnet/commit/cb541e95c35d6d6e4eac0813164a2ea55a52eea7))
+
+
 ## v0.44.4 (2026-08-05)
 
 ### Bug Fixes
