@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.45.2 (2026-08-06)
+
+### Bug Fixes
+
+- **infra**: Import existing validator Pylon secrets
+  ([#538](https://github.com/ditto-assistant/ditto-subnet/pull/538),
+  [`220c095`](https://github.com/ditto-assistant/ditto-subnet/commit/220c0951b079bc93e361d4cb3911f7282c173fe3))
+
+- **release**: Deploy datagen semantic releases
+  ([#551](https://github.com/ditto-assistant/ditto-subnet/pull/551),
+  [`6ad56f5`](https://github.com/ditto-assistant/ditto-subnet/commit/6ad56f56c5ced59efb9d408fcb941ffd72e3475b))
+
+
 ## v0.45.1 (2026-08-06)
 
 ### Bug Fixes
