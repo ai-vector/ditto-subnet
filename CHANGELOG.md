@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.45.4 (2026-08-07)
+
+### Bug Fixes
+
+- **release**: Mint datagen smoke token in auth action
+  ([#552](https://github.com/ditto-assistant/ditto-subnet/pull/552),
+  [`241c5cc`](https://github.com/ditto-assistant/ditto-subnet/commit/241c5ccaabba2d224624073d968bc3592c1ce473))
+
+
 ## v0.45.3 (2026-08-07)
 
 ### Bug Fixes
