@@ -2,6 +2,39 @@
 
 <!-- version list -->
 
+## v0.45.3 (2026-08-07)
+
+### Bug Fixes
+
+- **dittobench**: Restore the hosted v8 practice endpoint
+  ([#555](https://github.com/ditto-assistant/ditto-subnet/pull/555),
+  [`a71c940`](https://github.com/ditto-assistant/ditto-subnet/commit/a71c9403970b68ed6ed5304200a1a12d13510b0c))
+
+- **platform**: Anchor the KOTH crown on the lineage, not the submission
+  ([#561](https://github.com/ditto-assistant/ditto-subnet/pull/561),
+  [`ab8f7c9`](https://github.com/ditto-assistant/ditto-subnet/commit/ab8f7c90046d5a2596f8ef7ff7329244e9ff0791))
+
+- **platform**: Keep emission catch-up running between waves
+  ([#554](https://github.com/ditto-assistant/ditto-subnet/pull/554),
+  [`2a33637`](https://github.com/ditto-assistant/ditto-subnet/commit/2a336376e19123e0148050c335c79ef962c2e17f))
+
+- **platform**: Preflight the monorepo checkout before deploying
+  ([#556](https://github.com/ditto-assistant/ditto-subnet/pull/556),
+  [`cda1972`](https://github.com/ditto-assistant/ditto-subnet/commit/cda19722defd8a81d2854f57e99e80c424e6cd6f))
+
+- **platform**: Project only the KOTH detail keys the retest path reads
+  ([#563](https://github.com/ditto-assistant/ditto-subnet/pull/563),
+  [`b77a740`](https://github.com/ditto-assistant/ditto-subnet/commit/b77a740e02ef8f1d4178003216e199d75cd0dc55))
+
+- **platform**: Serve legacy leaderboard families with zero-score children
+  ([#557](https://github.com/ditto-assistant/ditto-subnet/pull/557),
+  [`c21a1c8`](https://github.com/ditto-assistant/ditto-subnet/commit/c21a1c86fcaa389c398877d2ebb6bd9c47c8b1e5))
+
+- **platform**: Stop hydrating score telemetry in the allocator floor read
+  ([#559](https://github.com/ditto-assistant/ditto-subnet/pull/559),
+  [`a64dc8b`](https://github.com/ditto-assistant/ditto-subnet/commit/a64dc8bfa182333bcaba503fb8be3d2537b008f7))
+
+
 ## v0.45.2 (2026-08-06)
 
 ### Bug Fixes
