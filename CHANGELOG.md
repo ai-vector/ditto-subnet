@@ -2,6 +2,29 @@
 
 <!-- version list -->
 
+## v0.46.0 (2026-08-08)
+
+### Bug Fixes
+
+- **infra**: Make the ansible converge runnable as documented
+  ([#567](https://github.com/ditto-assistant/ditto-subnet/pull/567),
+  [`61695e2`](https://github.com/ditto-assistant/ditto-subnet/commit/61695e293b5167f666ca50816b5653b5bf040138))
+
+- **infra**: Pin the compose project and stop reading a secret that does not exist
+  ([#568](https://github.com/ditto-assistant/ditto-subnet/pull/568),
+  [`5a347c9`](https://github.com/ditto-assistant/ditto-subnet/commit/5a347c90956ababc2029a32a8006e5cc27969ca4))
+
+- **platform**: Reject a half-provisioned checkout before deploying
+  ([#569](https://github.com/ditto-assistant/ditto-subnet/pull/569),
+  [`b1284a4`](https://github.com/ditto-assistant/ditto-subnet/commit/b1284a4e7a67f9df1a55c2f388f7ad7819bda0c2))
+
+### Features
+
+- **platform**: Operator-controlled emission burn, and port the SN118 Backroom MCP
+  ([#571](https://github.com/ditto-assistant/ditto-subnet/pull/571),
+  [`b0f6ee8`](https://github.com/ditto-assistant/ditto-subnet/commit/b0f6ee814fe6137dba25ef61f016e2f107a82d9a))
+
+
 ## v0.45.4 (2026-08-07)
 
 ### Bug Fixes
